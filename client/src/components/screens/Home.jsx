@@ -45,7 +45,7 @@ return (
   <section className="profile" key={item._id}>
   <header className="header">
     <div className="details">
-      <img src={item.photo} alt="John Doe" className="profile-pic"/>
+      <img src={item.photo}  className="profile-pic"/>
       <h1 className="heading">{item.title}</h1>
       <div className="powertype">
         
