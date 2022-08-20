@@ -43,7 +43,7 @@ const Signup = () => {
     <img className='myimage' src="https://miro.medium.com/max/846/1*Gc0oA40CYiKstDsMzXhLlw.png" alt="" />
       <input type="text" placeholder='name' value={name} onChange={(e)=>setName(e.target.value)} />
       <input type="text" placeholder='email' value={email} onChange={(e)=>setEmail(e.target.value)} />
-      <input type="text" placeholder='password' value={password} onChange={(e)=>setPassword(e.target.value)} />
+      <input type="password" placeholder='password' value={password} onChange={(e)=>setPassword(e.target.value)} />
       <button onClick={()=>PostData()} className="btn waves-effect waves-light #4a148c purple darken-4" >Register
 </button>
 <h5>
