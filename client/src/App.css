@@ -29,7 +29,10 @@
   .details {
     text-align: center;
   }
-  
+  .gridfor{
+    display:"flex" !important;
+    margin:"0";
+  }
   .profile-pic {
     height: 6rem;
     width: 6rem;
@@ -199,11 +202,24 @@
     display: none;
   }
   
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 550px) {
     
-.home{
-  display: grid;
+.gridfor{
+  display: grid !important;
+  grid-template-columns: auto !important;
+  max-width: 400px !important;
+
 }
+input{
+  width: 70%;
+}
+.mstyle{
+  margin-top: -27px !important;
+  margin-left: 20px !important;
+  padding: 20px !important;
+  text-align: center !important;
+}
+
 
     .nav-menu {
       display: flex;

@@ -8,17 +8,14 @@ import Signup from './components/screens/Signup';
 import Profile from './components/screens/Profile';
 import {BrowserRouter,Route,Routes,useNavigate} from "react-router-dom"
 import Createpost from './components/screens/Createpost';
-import { initialState, reducer } from "./reducers/userReducer"
 
- export const userContext = createContext()
 
   
   
 
 function App() {
-  const [state,dispatch] = useReducer(reducer,initialState)
   return (
-    <userContext.Provider value={{state,dispatch}}>
+   
     <BrowserRouter>
     <Navbar/>
     <Routes>
@@ -30,7 +27,6 @@ function App() {
         
       </Routes>
     </BrowserRouter>
-    </userContext.Provider>
   )
 }
 

@@ -37,7 +37,7 @@ const Createpost = () => {
           }
           else{
             M.toast({html: "created post succesfully",classes:"#7cb342 light-green darken-1"})
-            navigate('/')
+            navigate('/home')
           }
         }).catch(err=>{
           console.log(err)
@@ -69,13 +69,17 @@ const Createpost = () => {
     }
   return (
     <>
-    <div style={{display:"flex",margin:"0",justifyContent:"center"}}>
+    <div className="gridfor .m .l .s" style={{display:"flex"}}>
 
     
-    <div className='card input-feild'
+    <div className='card input-feild .m mstyle'
     style={{margin:'30px',maxWidth:"500px",padding:"20px",textAlign:"center"}}
     >
+       <div>
+        <img style={{width:'160px',heigth:"160px",borderRadius:"80px",border:"1px solid grey",marginRight:"20px"}} src="https://assets.puzzlefactory.com/puzzle/254/191/original.jpg" alt="" />
+        </div>
        <div className="btn #4a148c purple darken-4">
+       
         <span style={{marginLeft:"20px"}}><i class="material-icons">camera_alt</i></span>
         <input type="file" onChange={(e)=>setImage(e.target.files[0])} />
       </div>
@@ -86,7 +90,7 @@ const Createpost = () => {
         
        
     </div>
-    <div className='card input-feild'
+    <div className='card input-feild .m mstyle'
     style={{margin:'30px',maxWidth:"500px",padding:"20px",textAlign:"center",marginLeft:"-29px"}}
     >
         <input type="text" required placeholder='Power*' value={power} onChange={(e)=>setPower(e.target.value)} />
@@ -94,7 +98,7 @@ const Createpost = () => {
         <input type="text" required placeholder='Height*' value={height} onChange={(e)=>setHeight(e.target.value)} />
         <input type="text" required placeholder='Weight*' value={weight} onChange={(e)=>setWeight(e.target.value)} />
        
-      <button style={{marginRight:"5px"}} onClick={(e)=>postDetails()} className="btn waves-effect waves-light grey" >Cancel
+      <button style={{marginRight:"5px"}} onClick={(e)=>navigate("/home")} className="btn waves-effect waves-light grey" >Cancel
   </button>
   <button onClick={(e)=>postDetails()} className="btn waves-effect waves-light blue darken-4" >Create
   </button>
